@@ -1,0 +1,128 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+    @font-face {
+        font-family: "InterVariable";
+        src: url("/assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+    }
+    
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+   clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+    font-family: "InterVariable", "sans-serif";
+    display: flex;
+    justify-content: center;
+    background: hsl(0, 0%, 8%);
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+    background: hsl(0, 0%, 12%);
+    align-items: center;
+    border-radius: 18px;
+    margin-top: 148px;
+}
+.avatar{
+    padding: 35px 0 0 0;
+}
+.avatar img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+.description{
+    text-align: center;
+    justify-content: center;
+}
+.description h1,span{
+    color: hsl(0, 0%, 100%);
+}
+.description p{
+    color: hsl(75, 94%, 57%);
+}
+.social-media-links ul{
+    list-style: none;
+    margin: 20px;
+    padding: 0;
+}
+.social-media-links li{
+    background: hsl(0, 0%, 20%);
+    padding: 11px 0 0 0;
+    margin: 10px 0 18px 0;
+    border-radius: 8px;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    /* border-width: 100px; */
+}
+.social-media-links a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+}
+.social-media-links li:hover a{
+    color: inherit;
+}
+.social-media-links li:hover{
+    background: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 8%);
+    font-weight: bold;
+}
+
+/* .attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 50px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+} */
+
+@media all and (max-width: 375px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 330px;
+        height: 620px;
+        background: hsl(0, 0%, 12%);
+        align-items: center;
+        border-radius: 18px;
+        margin-top: 95px;
+    }
+}
